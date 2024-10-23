@@ -1,0 +1,540 @@
+@font-face {
+    font-family: "Valorax";
+    src: url(font/Valorax-lg25V.otf);
+}
+
+@font-face {
+    font-family: 'Migae';
+    src: url(font/MigaeSemibold-3zd2M.otf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+.container {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hex-grid .grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(img/grid.svg) repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-size: 500px;
+}
+
+.achievements {
+    position:relative;
+    border-width: 1px;
+    border: white;
+    overflow: hidden;
+    border-style: solid;
+    opacity: 1px;
+    background: #1a1a1a;
+    height: 0;
+    margin: 30px;
+    padding: 100px;
+    padding-right: 1000px;
+    padding-bottom: 3100px;
+    z-index: 2;
+}
+
+.stem-logo {
+    display: flex;
+    border-radius: 100px;
+    position: absolute;
+    margin-top: 0;
+    top: 30px;
+    height: 80px;
+    width: 80px;
+}
+
+.image {
+    display: flex;
+    position: absolute;
+    margin-top: 0;
+    right: 250px;
+    top: 200px;
+    bottom: 30px;
+    height: 600px;
+    width: 1000px;
+}
+
+.stem-wards {
+    display:flex;
+    position: absolute;
+    text-decoration: underline;
+    top: 25px;
+    left: 200px;
+    margin: 0;
+    font-size: 60px;
+}
+
+.article{
+    display:flex;
+    position: absolute;
+    top: 900px;
+    margin: 0; 
+    margin-right: 100px;
+    font-size: 35px;
+}
+
+.hex-grid .light {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(img/golden-shower.gif) no-repeat;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.welcome{
+    font-family: "Valorax", sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 100px;
+    position: absolute;
+    margin: 0;
+    position: relative;
+    padding: 0;
+    z-index: 1;
+}
+
+h1 {
+    color: #ffff;
+}
+
+p {
+    font-size: 1.4em;
+    color: #ccc;
+    line-height: 1.5em;
+}
+
+.menu {
+    width: 100%;
+    min-height: 100vh;
+    color: #525252;
+}
+
+nav {
+    background: #1a1a1a;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10%;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    display: inline-flex;
+    left: 30px;
+    width: 120px;
+    color: white;
+    font-size: 30px;
+}
+
+.logo i {
+    padding: 2px;
+}
+
+.user-pic {
+    position: absolute;
+    right: 70px;
+    width: 40px;
+    bottom: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#user-pic {
+    display: none;
+}
+
+#user-pic:checked ~ .sub-menu-wrap{
+    max-height: 450px;
+}
+
+.menu ul {
+    width: 100%;
+    text-align: right;
+}
+
+.menu ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 10px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    text-decoration: underline;
+}
+
+.hide ul{
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.menu-icon i{
+    font-size: 30px;
+}
+
+.sub-menu-wrap {
+    border-radius: 40px;
+    position: absolute;
+    top: 95%;
+    right: 0;
+    width: 200px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    z-index: 3;
+}
+
+.sub-menu-wrap.open-menu {
+    max-height: 450px;
+}
+
+.sub-menu {
+    backdrop-filter: blur(15px);
+    background: transparent;
+    padding: 20px;
+    margin: 10px;
+    position: relative;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.info h3 {
+    font-weight: 200;
+    font-size: 25px;
+    color: white;
+}
+
+.info img {
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.sub-menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0 10px;
+}
+
+@media screen and (max-width: 1920px) {
+    .user-pic{
+        display: none;
+    }
+    .welcome{
+        font-size: 200px;
+    }
+    .text{
+        font-size: 30px;
+        left: 0;
+    }
+    .hide{
+        display: none;
+    }
+    .container {
+        min-height: 100vh;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .image{
+        right: 50px;
+    }
+    .article{
+        text-align: center;
+    }
+    .achievements{
+        padding-bottom: 4000px;
+    }
+    .user-pic{
+        display: none;
+    }
+    .welcome{
+        font-size: 100px;
+    }
+    .text{
+        font-size: 20px;
+    }
+    .sentence{
+        margin-left: 32em;
+    }
+    .back-ground img{
+        width: 700px;
+        margin-top: 10em;
+    }
+    .container {
+        min-height: 90vh;
+    }
+    .back-ground{
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 960px){
+    .image{
+        top: 150px;
+        width: 700px;
+        height: 400px;
+    }
+    .article{
+        top: 600px;
+        font-size: 25px;
+    }
+    .achievements{
+        padding-right: 700px;
+        padding-bottom: 2900px;
+    }
+    .user-pic{
+        display: inline;
+    }
+    .welcome{
+        font-size: 80px;
+    }
+    .text {
+        font-size: 15px;
+    }
+    .sentence{
+        font-size: 20px;
+        text-align: center;
+        margin-left: 1em;
+    }
+    .back-ground img{
+        display: inline;
+        margin-top: 1em;
+        margin-left: 8em;
+        position: static;
+    }
+    .show li a {
+        display: none;
+    }
+    .hide{
+        display: inline;
+    }
+    .container {
+        min-height: 83.4vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .image{
+        width: 600px;
+        height: 400px;
+        left: 50px;
+    }
+    .achievements{
+        padding-right: 600px;
+    }
+    .article{
+        position: absolute;
+        left: 50px;
+        margin-right: 50px;
+    }
+    .welcome{
+        font-size: 80px;
+    }
+    .text {
+        font-size: 15px;
+    }
+    .back-ground img{
+        display: inline;
+        width: 400px;
+        height: 250px;
+        margin-left: 11em;
+    }
+    .sentence{
+        font-size: 15px;
+        text-align: center;
+    }
+    .container {
+        min-height: 80vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .achievements{
+        padding-right: 400px;
+        padding-bottom: 2700px;
+    }
+    .image{
+        width: 400px;
+        height: 250px;
+    }
+    .article{
+        top: 430px;
+    }
+    .stem-logo{
+        left: 50px;
+    }
+    .stem-wards{
+        left: 140px;
+    }
+    .article{
+        font-size: 20px;
+    }
+    .welcome{
+        font-size: 60px;
+    }
+    .sentence {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+    }
+    .back-ground img{
+        margin: 0;
+        margin-left: 6.5em;
+        display: inline;
+        position: static;
+    }
+    .text{
+        font-size: 12px;
+        left: 0;
+    }
+    .container {
+        min-height: 82.7vh;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .achievements{
+        padding-right: 300px;
+        padding-bottom: 2600px;
+    }
+    .stem-logo{
+        width: 60px;
+        height: 60px;
+    }
+    .stem-wards{
+        font-size: 50px;
+        left: 120px;
+        top: 20px;
+    }
+    .image{
+        top: 120px;
+        height: 200px;
+        width: 300px;
+    }
+    .article{
+        top: 350px;
+        left: 0;
+        margin-right: 0;
+    }
+    .user-pic{
+        top: 15px;
+    }
+    .welcome{
+        font-size: 50px;
+    }
+    .text{
+        font-size: 10px;
+        margin-right: 22em;
+        margin-left: 22em;
+        left: 0;
+    }
+    .sentence{
+        margin-left: 12em;
+        margin-right: 12em;
+    }
+    .back-ground img{
+        display: inline;
+        position: static;
+        margin-right: 200px;
+        margin-left: 200px;
+    }
+    .container {
+        min-height: 82.7vh;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .achievements{
+        padding-right: 200px;
+        padding-bottom: 1950px;
+    }
+    .image{
+        height: 150px;
+        width: 250px;
+        left: 25px;
+    }
+    .article{
+        top: 300px;
+        font-size: 15px;
+    }
+    .stem-logo{
+        width: 50px;
+        height: 50px;
+    }
+    .stem-wards{
+        font-size: 30px;
+        left: 110px;
+        top: 30px;
+    }
+    .user-pic {
+        top: 15px;
+        right: 30px;
+    }
+    .welcome{
+        font-size: 40px;
+    }
+    .text{
+        font-size: 10px;
+        left: 0;
+        margin-left: 23em;
+        margin-right: 23em;
+    }
+    .sentence{
+        margin-left: 15em;
+        margin-right: 15em;
+        margin-bottom: 1.4em;
+    }
+    .container {
+        min-height: 82.7vh;
+    }
+}

@@ -1,0 +1,397 @@
+@font-face {
+    font-family: "Valorax";
+    src: url(font/Valorax-lg25V.otf);
+}
+
+@font-face {
+    font-family: 'Migae';
+    src: url(font/MigaeSemibold-3zd2M.otf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hex-grid .grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(img/grid.svg) repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-size: 500px;
+}
+
+.back-ground{
+    position: relative;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 0;
+    z-index: 1;
+}
+
+.back-ground img{
+    display: flex;
+    position: absolute;
+    right: 50px;
+    top: 500px;
+    width: 700px;
+    height: 400px;
+}
+
+.back-ground .pic {
+    display: flex;
+    position: absolute;
+    right: 300px;
+    top: 50px;
+    width: 700px;
+    height: 400px;
+}
+
+.hex-grid .light {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(img/yellow.gif) no-repeat;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.welcome{
+    font-family: "Valorax", sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 100px;
+    position: absolute;
+    margin: 0;
+    margin-bottom: 250px;
+    margin-top: 150px;
+    position: relative;
+    padding: 0;
+    z-index: 1;
+}
+
+.sentence {
+    font-family: 'Migae', sans-serif;
+    display: flex;
+    text-align: left;
+    position: relative;
+    margin-left: 1em;
+    margin-right: 30em;
+    margin-bottom: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+h1 {
+    color: #ffff;
+}
+
+p {
+    font-size: 1.4em;
+    color: #ccc;
+    line-height: 1.5em;
+}
+
+.menu {
+    width: 100%;
+    min-height: 100vh;
+    color: #525252;
+}
+
+nav {
+    background: #1a1a1a;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10%;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    display: inline-flex;
+    left: 30px;
+    width: 120px;
+    color: white;
+    font-size: 30px;
+}
+
+.logo i {
+    padding: 2px;
+}
+
+.user-pic {
+    position: absolute;
+    right: 70px;
+    width: 40px;
+    bottom: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#user-pic {
+    display: none;
+}
+
+#user-pic:checked ~ .sub-menu-wrap{
+    max-height: 450px;
+}
+
+.menu ul {
+    width: 100%;
+    text-align: right;
+}
+
+.menu ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 10px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    text-decoration: underline;
+}
+
+.hide ul{
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.menu-icon i{
+    font-size: 30px;
+}
+
+.sub-menu-wrap {
+    border-radius: 40px;
+    position: absolute;
+    top: 95%;
+    right: 0;
+    width: 200px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    z-index: 2;
+}
+
+.sub-menu-wrap.open-menu {
+    max-height: 450px;
+}
+
+.sub-menu {
+    backdrop-filter: blur(15px);
+    background: transparent;
+    padding: 20px;
+    margin: 10px;
+    position: relative;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.info h3 {
+    font-weight: 200;
+    font-size: 25px;
+    color: white;
+}
+
+.info img {
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.sub-menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0 10px;
+}
+
+@media screen and (max-width: 1920px) {
+    .user-pic{
+        display: none;
+    }
+    .sentence{
+        font-size: 35px;
+    }
+    .welcome{
+        font-size: 200px;
+    }
+    .hide{
+        display: none;
+    }
+    .container {
+        min-height: 100vh;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .user-pic{
+        display: none;
+    }
+    .welcome{
+        font-size: 100px;
+    }
+    .sentence{
+        margin-left: 32em;
+    }
+    .back-ground img{
+        width: 700px;
+        margin-top: 10em;
+    }
+    .container {
+        min-height: 90vh;
+    }
+    .back-ground{
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 960px){
+    .user-pic{
+        display: inline;
+    }
+    .welcome{
+        font-size: 80px;
+    }
+    .sentence{
+        font-size: 20px;
+        text-align: center;
+        margin-left: 1em;
+    }
+    .back-ground img{
+        display: inline;
+        margin-top: 1em;
+        margin-left: 8em;
+        position: static;
+    }
+    .show li a {
+        display: none;
+    }
+    .hide{
+        display: inline;
+    }
+    .container {
+        min-height: 83.4vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .welcome{
+        font-size: 80px;
+    }
+    .back-ground img{
+        display: inline;
+        width: 400px;
+        height: 250px;
+        margin-left: 11em;
+    }
+    .sentence{
+        font-size: 15px;
+        text-align: center;
+    }
+    .container {
+        min-height: 80vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .welcome{
+        font-size: 60px;
+    }
+    .sentence {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+    }
+    .back-ground img{
+        margin: 0;
+        margin-left: 6.5em;
+        display: inline;
+        position: static;
+    }
+    .container {
+        min-height: 82.7vh;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .user-pic{
+        top: 15px;
+    }
+    .welcome{
+        font-size: 50px;
+    }
+    .sentence{
+        margin-left: 12em;
+        margin-right: 12em;
+    }
+    .back-ground img{
+        display: inline;
+        position: static;
+        margin-right: 200px;
+        margin-left: 200px;
+    }
+    .container {
+        min-height: 82.7vh;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .user-pic {
+        top: 15px;
+        right: 30px;
+    }
+    .welcome{
+        font-size: 40px;
+    }
+    .sentence{
+        margin-left: 15em;
+        margin-right: 15em;
+        margin-bottom: 1.4em;
+    }
+    .container {
+        min-height: 82.7vh;
+    }
+}
