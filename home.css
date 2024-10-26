@@ -243,6 +243,9 @@ nav {
     .show li a {
         display: none;
     }
+    .user-pic{
+     display: inline;
+    }
     .hide{
         display: inline;
     }
